@@ -10,30 +10,44 @@
   <body ng-app="app">
 
     <div class="container" ng-controller="FormController">
+
+      <p class="contact">Contact Us</p>
+
       <form ng-submit="addForm(form)">
 
         <label class="label">Name</label>
           <p class="control">
-            <input class="input" type="text" placeholder="Text input">
+            <input class="input" type="text"
+                  placeholder="First and Last Name"
+                  ng-model="form.name"
+                  ng-keyup="validateName(form.name)"/>
+            <span class="input-error">{{ errors.name }}</span>
           </p>
 
         <label class="label">Email</label>
-          <p class="control has-icon has-icon-right">
-            <input class="input is-danger" type="text" placeholder="Email input">
-            <i class="fa fa-warning"></i>
-            <span class="help is-danger">This email is invalid</span>
-          </p>
-
-        <label class="label">Webiste</label>
           <p class="control">
             <input class="input" type="text"
-                   ng-model="gif.url" ng-keyup="validateUrl(gif.url)" />
+                  placeholder="Email input"
+                  ng-model="form.email"
+                  ng-keyup="validateEmail(form.email)" />
+            <span class="input-error">{{ errors.email }}</span>
+          </p>
+
+        <label class="label">Website</label>
+          <p class="control">
+            <input class="input" type="text"
+                   ng-model="form.url"
+                   ng-keyup="validateUrl(form.url)"/>
             <span class="input-error">{{ errors.url }}</span>
           </p>
 
         <label class="label">Message</label>
           <p class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <textarea class="textarea"
+                  placeholder="Textarea"
+                  ng-model="form.msg"
+                  ng-keyup="validateMsg(form.msg)"></textarea>
+          <span class="input-error">{{ errors.msg }}</span>
           </p>
 
         <p class="control">
