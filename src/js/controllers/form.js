@@ -42,7 +42,7 @@ function FormController ($scope, $http) {
       $scope.errors.url = '';
     }
     if (url === '') {
-      $scope.errors.url = '';
+      $scope.errors.url = "Website cannot be left empty"
     }
     return true;
   };
