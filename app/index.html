@@ -55,6 +55,18 @@
         </p>
 
       </form>
+
+      <h1>My Contacts</h1>
+        <ul class="forms">
+          <li ng-repeat="form in forms">
+            <div class="box"><p>
+              <strong>{{form.name}}</strong> <small>{{form.email}}</small> <small>{{form.url}}</small>
+              <br>
+              {{form.msg}}
+            </p></div>
+          </li>
+        </ul>
+
     </div>
 
     <script src="js/bundle.js"></script>
