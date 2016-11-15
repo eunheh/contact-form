@@ -5,3 +5,6 @@
 
 Following is a link to the contact-form link:
 [contact-form](http://tiy-gracelee-contact-form.surge.sh)
+
+Following is a link to the contact-form collection database:
+[collections/glee-contacts](https://class-server.herokuapp.com/collections/glee-contacts)
