@@ -69,8 +69,8 @@ function FormController ($scope, $http) {
         let form = resp.data;
         $scope.forms.push(form);
       });
+      $scope.form = [];
     }
-  $scope.form = [];
   };
 }
 
