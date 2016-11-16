@@ -67,7 +67,7 @@ function FormController ($scope, $http) {
     if ($scope.validateForm(form)) {
       $http.post(URL, form).then(function (resp) {
         let form = resp.data;
-        $scope.forms.push(form);
+        $scope.forms.unshift(form);
       });
       $scope.form = [];
     }
